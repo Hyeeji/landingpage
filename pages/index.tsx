@@ -13,7 +13,7 @@ import FAQ from "./FAQ";
 
 const Home = () => {
   return (
-    <div className="scrollbar-hide">
+    <div className="overflow-scroll scrollbar-hide">
       <Head>
         <title>다이어트 챌린지</title>
         <meta

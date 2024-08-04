@@ -59,7 +59,7 @@ const Second = () => {
   };
 
   return (
-    <div className="bg-red-50 min-h-screen flex flex-col scrollbar-hide">
+    <div className="bg-red-50 min-h-screen flex flex-col">
       <div className="flex flex-col justify-center flex-1">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mt-14">

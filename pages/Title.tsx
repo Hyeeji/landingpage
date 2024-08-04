@@ -5,7 +5,7 @@ import "../styles/globals.css";
 
 const Title = () => {
   return (
-    <div className="relative h-screen w-full scrollbar-hide">
+    <div className="relative h-screen w-full">
       <Head>
         <title>다이어트 챌린지</title>
         <meta name="description" content="Welcome to our landing page" />

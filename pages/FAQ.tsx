@@ -111,14 +111,13 @@ const FAQ = () => {
   return (
     <div
       id="faq"
-      className="scrollbar-hide min-h-screen flex flex-col items-center justify-center relative"
+      className="min-h-screen flex flex-col items-center justify-center relative"
     >
       <div className="absolute inset-0 z-[-1]">
         <Image
           src="/img/background/1.png"
           alt="pink background image"
           fill={true}
-          style={{ objectFit: "cover" }}
         />
       </div>
       <div className="flex flex-col items-center justify-center container mx-auto px-4 py-16">
@@ -131,7 +130,7 @@ const FAQ = () => {
                 className="cursor-pointer w-full p-4 flex items-center focus:outline-none"
               >
                 <FaCheckCircle className="mr-2" />
-                <h4 className="text-2xl font-semibold text-gray-800">
+                <h4 className="text-xl font-semibold text-gray-800">
                   {faq.question}
                 </h4>
               </div>

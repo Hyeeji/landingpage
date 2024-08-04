@@ -21,12 +21,12 @@ const Fee = () => {
     >
       <div className="flex flex-col items-center justify-center container mx-auto px-1 py-12">
         <div className="bg-gray-50 shadow-2xl rounded-2xl px-6 py-12 mb-12 text-center">
-          <h3 className="text-3xl font-bold text-[#E86896] mb-4">
+          <h3 className="text-2xl font-bold text-[#E86896] mb-4">
             참가비 안내
           </h3>
           <p className="text-2xl mb-4">
             <span className="line-through text-gray-500">정가 40,000원</span>
-            <span className="text-3xl font-bold text-[#E86896]"> 30,000원</span>
+            <span className="text-2xl font-bold text-[#E86896]"> 30,000원</span>
           </p>
           <div className="flex flex-row p-3 bg-gray-200 rounded-xl items-center justify-center">
             <IoTicketOutline className="text-[#E86896] mr-2 text-2xl" />
@@ -35,7 +35,7 @@ const Fee = () => {
           <h3 className="text-center text-2xl font-bold mt-10 mb-6 text-[#E86896]">
             참여 혜택
           </h3>
-          <ul className="list-none text-lg text-gray-700">
+          <ul className="list-none text-base text-gray-700">
             {benefits.map((benefit, index) => (
               <li key={index} className="mb-2 flex items-center">
                 <FaCheckCircle className="text-[#E86896] mr-2" />
