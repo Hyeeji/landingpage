@@ -51,7 +51,7 @@ const Mission = () => {
             <div className="flex justify-center mb-4">
               <Image
                 className="rounded-2xl"
-                src="img/weight.jpeg"
+                src="/img/weight.jpeg"
                 alt="weight"
                 width={200}
                 height={200}

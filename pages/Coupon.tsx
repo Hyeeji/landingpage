@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import "../styles/globals.css";
 
 const Coupon = () => {
   const [showDetails, setShowDetails] = useState(false);

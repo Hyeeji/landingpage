@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import Title from "./Title";
 import Second from "./Second";
@@ -10,6 +10,7 @@ import Recipe from "./Recipe";
 import Mission from "./Mission";
 import Fee from "./Fee";
 import FAQ from "./FAQ";
+import "../styles/globals.css";
 
 const Home = () => {
   return (

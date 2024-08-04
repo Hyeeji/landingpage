@@ -19,19 +19,23 @@ const Title = () => {
         />
       </div>
       <div className="h-full flex flex-col justify-between items-center">
-        <div className="flex-grow flex flex-col justify-center items-center text-bold text-center text-[5rem] text-black">
-          <p className="mt-4">함께하는</p>
-          <p>다이어트</p>
-          <p>챌린지</p>
-          <div className="text-3xl m-12">
+        <div className="font-['theface'] flex-grow flex flex-col justify-center items-center text-center text-black">
+          <p className="mt-4 text-8xl sm:text-8xl md:text-9xl lg:text-9xl">
+            함께하는
+          </p>
+          <p className="text-8xl sm:text-8xl md:text-9xl lg:text-9xl">
+            다이어트
+          </p>
+          <p className="text-8xl sm:text-8xl md:text-9xl lg:text-9xl">챌린지</p>
+          <div className="text-5xl sm:text-4xl md:text-6xl lg:text-8xl mt-12">
             <p className="mb-3">5가지 혜택 받고</p>
-            <p>건강하게 다이어트하기</p>
+            <p>건강하게 같이 다이어트하기</p>
           </div>
         </div>
         <div
-          className="h-16 w-48 flex justify-center items-center
+          className="animate-bounce  h-16 w-44 sm:h-16 sm:w-44 md:h-20 md:w-48 lg:h-24 lg:w-52 flex justify-center items-center
           bg-white border-2 border-[#E86896] rounded-full
-          cursor-pointer text-[#E86896] text-xl mb-32"
+          cursor-pointer text-[#E86896] text-xl sm:text-xl md:text-xl lg:text-xl mb-24 sm:mb-24 md:mb-28 lg:mb-32"
         >
           지금 참여하기
         </div>

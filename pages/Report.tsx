@@ -45,7 +45,7 @@ const Report = () => {
                 <Image
                   src={src}
                   alt={`report image ${index + 1}`}
-                  width={800}
+                  width={400}
                   height={800}
                   className="mx-auto rounded-2xl"
                 />
@@ -57,10 +57,12 @@ const Report = () => {
           주간 리포트 제공
         </h3>
         <p className="text-center text-lg">
-          몸무게와 칼로리 변화를 기록한 리포트를 제공합니다
+          몸무게와 칼로리 변화를 기록한 <br />
+          리포트를 제공합니다
         </p>
         <p className="text-center text-lg font-semibold">
-          리포트를 통해 다이어트 진행 상황을 쉽게 파악할 수 있습니다
+          리포트를 통해 다이어트 진행 상황을
+          <br /> 쉽게 파악할 수 있습니다
         </p>
       </div>
     </div>

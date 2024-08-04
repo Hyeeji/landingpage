@@ -46,9 +46,9 @@ const Fee = () => {
         </div>
 
         <div
-          className="h-16 w-48 flex justify-center items-center
+          className="animate-bounce h-16 w-44 sm:h-16 sm:w-44 md:h-20 md:w-48 lg:h-24 lg:w-52 flex justify-center items-center
           bg-white border-2 border-[#E86896] rounded-full
-          cursor-pointer text-[#E86896] text-xl mt-8"
+          cursor-pointer text-[#E86896] text-xl sm:text-xl md:text-xl lg:text-xl mt-16 sm:mb-16 md:mb-20 lg:mb-24"
         >
           지금 참여하기
         </div>

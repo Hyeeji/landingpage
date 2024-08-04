@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import "../styles/globals.css";
 
 const Calories = () => {
   const [showDetails, setShowDetails] = useState(false);
@@ -37,7 +38,7 @@ const Calories = () => {
           AI 기술을 통해 식단의 칼로리를 측정해드립니다.
         </p>
         <p className="text-center text-lg font-semibold">
-          정확한 칼로리를 위해서 측정할 때 음식과 양을 적어 주세요.
+          정확한 칼로리를 위해서 측정할 때<br /> 음식과 양을 적어 주세요.
         </p>
         <p
           className="text-center mt-5 text-lg underline cursor-pointer"
@@ -48,7 +49,8 @@ const Calories = () => {
         {showDetails && (
           <div className="mt-4 text-center">
             <p className="flex justify-center  text-[#E86896] items-center shadow-lg rounded-xl text-lg p-3 m-4 w-auto h-20">
-              하단의 카카오톡 버튼을 눌러 채팅방에 공유해주세요
+              하단의 카카오톡 버튼을 눌러
+              <br /> 채팅방에 공유해주세요
             </p>
           </div>
         )}

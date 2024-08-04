@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "../styles/globals.css";
 import { FaCheckCircle } from "react-icons/fa";
 import Image from "next/image";
+import "../styles/globals.css";
 
 interface FAQItem {
   question: string;
@@ -85,7 +86,13 @@ const faqData: FAQItem[] = [
   },
   {
     question: "업로드 시간을 꼭 지켜야 하나요?",
-    answer: "네, 22시 전에 모두 인증을 마쳐주셔야 인증 성공입니다.",
+    answer: (
+      <p>
+        네, 22시 전에 모두 인증을 마쳐주셔야
+        <br />
+        인증 성공입니다.
+      </p>
+    ),
   },
   {
     question: "칼로리가 이상해요",
