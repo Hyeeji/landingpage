@@ -20,14 +20,14 @@ const Title = () => {
       </div>
       <div className="h-full flex flex-col justify-between items-center">
         <div className="font-['theface'] flex-grow flex flex-col justify-center items-center text-center text-black">
-          <p className="mt-4 text-8xl sm:text-8xl md:text-9xl lg:text-9xl">
+          <p className="mt-4 text-7xl sm:text-8xl md:text-9xl lg:text-9xl">
             함께하는
           </p>
-          <p className="text-8xl sm:text-8xl md:text-9xl lg:text-9xl">
+          <p className="text-7xl sm:text-8xl md:text-9xl lg:text-9xl">
             다이어트
           </p>
-          <p className="text-8xl sm:text-8xl md:text-9xl lg:text-9xl">챌린지</p>
-          <div className="text-5xl sm:text-4xl md:text-6xl lg:text-8xl mt-12">
+          <p className="text-7xl sm:text-6xl md:text-9xl lg:text-9xl">챌린지</p>
+          <div className="text-4xl sm:text-4xl md:text-6xl lg:text-8xl mt-12">
             <p className="mb-3">5가지 혜택 받고</p>
             <p>건강하게 같이 다이어트하기</p>
           </div>
