@@ -15,7 +15,7 @@ const Mission = () => {
     <div
       id="mission"
       className="min-h-screen flex bg-gray-900 
-       items-center justify-center"
+       items-center justify-center scrollbar-hide"
     >
       <div className="flex flex-col items-center justify-center container mx-auto px-4 py-16">
         <div className="w-full mb-12 flex justify-center">

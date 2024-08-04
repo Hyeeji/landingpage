@@ -13,7 +13,7 @@ const Calories = () => {
   return (
     <div
       id="calories"
-      className="min-h-screen flex items-center justify-center"
+      className="scrollbar-hide min-h-screen flex items-center justify-center"
     >
       <div className="flex flex-col items-center justify-center container mx-auto px-4 py-16">
         <div className="flex justify-center mb-12 w-full space-x-4">
@@ -47,7 +47,7 @@ const Calories = () => {
         </p>
         {showDetails && (
           <div className="mt-4 text-center">
-            <p className="flex justify-center items-center shadow-lg rounded-xl text-lg p-3 m-4 w-auto h-20">
+            <p className="flex justify-center  text-[#E86896] items-center shadow-lg rounded-xl text-lg p-3 m-4 w-auto h-20">
               하단의 카카오톡 버튼을 눌러 채팅방에 공유해주세요
             </p>
           </div>

@@ -11,7 +11,10 @@ const Refund = () => {
   };
 
   return (
-    <div id="refund" className="min-h-screen flex items-center justify-center">
+    <div
+      id="refund"
+      className="min-h-screen flex items-center justify-center scrollbar-hide"
+    >
       <div className="flex flex-col items-center justify-center container mx-auto px-4 py-16">
         <Image
           src="/img/rrefund.png"

@@ -17,10 +17,10 @@ const Fee = () => {
   return (
     <div
       id="fee"
-      className="min-h-screen flex flex-col bg-pink-50 items-center justify-center"
+      className="scrollbar-hide min-h-screen flex flex-colitems-center justify-center"
     >
-      <div className="flex flex-col items-center justify-center container mx-auto px-4 py-12">
-        <div className="bg-white shadow-lg rounded-2xl p-12 mb-12 text-center">
+      <div className="flex flex-col items-center justify-center container mx-auto px-1 py-12">
+        <div className="bg-gray-50 shadow-2xl rounded-2xl px-6 py-12 mb-12 text-center">
           <h3 className="text-3xl font-bold text-[#E86896] mb-4">
             참가비 안내
           </h3>
@@ -29,21 +29,22 @@ const Fee = () => {
             <span className="text-3xl font-bold text-[#E86896]"> 30,000원</span>
           </p>
           <div className="flex flex-row p-3 bg-gray-200 rounded-xl items-center justify-center">
-            <IoTicketOutline className="text-[#E86896] mr-2 text-xl" />
+            <IoTicketOutline className="text-[#E86896] mr-2 text-2xl" />
             <p className="text-lg font-semibold">얼리버드 10,000원 할인</p>
           </div>
+          <h3 className="text-center text-2xl font-bold mt-10 mb-6 text-[#E86896]">
+            참여 혜택
+          </h3>
+          <ul className="list-none text-lg text-gray-700">
+            {benefits.map((benefit, index) => (
+              <li key={index} className="mb-2 flex items-center">
+                <FaCheckCircle className="text-[#E86896] mr-2" />
+                {benefit}
+              </li>
+            ))}
+          </ul>
         </div>
-        <h3 className="text-center text-2xl font-bold mb-4 text-[#E86896]">
-          참여 혜택
-        </h3>
-        <ul className="list-none text-lg text-gray-700 mb-8">
-          {benefits.map((benefit, index) => (
-            <li key={index} className="mb-2 flex items-center">
-              <FaCheckCircle className="text-[#E86896] mr-2" />
-              {benefit}
-            </li>
-          ))}
-        </ul>
+
         <div
           className="h-16 w-48 flex justify-center items-center
           bg-white border-2 border-[#E86896] rounded-full

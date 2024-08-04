@@ -13,15 +13,18 @@ const Coupon = () => {
   return (
     <div
       id="coupon"
-      className="min-h-screen bg-[#FCEDF2] flex items-center justify-center"
+      className="scrollbar-hide min-h-screen bg-[#FCEDF2] flex items-center justify-center"
     >
       <div className="flex flex-col items-center justify-center container mx-auto px-4 py-16">
-        <Image
-          src="/img/coupon1.png"
-          alt="coupon image"
-          width={200}
-          height={200}
-        />
+        <div className="flex justify-center mb-8">
+          <Image
+            src="/img/coupon1.png"
+            alt="coupon image"
+            width={200}
+            height={200}
+            className="object-cover"
+          />
+        </div>
         <h3 className="text-center text-[#E86896] text-2xl font-bold mb-4">
           친구와 함께 챌린지 성공 시 <br /> 5,000원 쿠폰 제공
         </h3>

@@ -111,7 +111,7 @@ const FAQ = () => {
   return (
     <div
       id="faq"
-      className="min-h-screen flex flex-col items-center justify-center relative"
+      className="scrollbar-hide min-h-screen flex flex-col items-center justify-center relative"
     >
       <div className="absolute inset-0 z-[-1]">
         <Image

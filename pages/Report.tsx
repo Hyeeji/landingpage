@@ -5,6 +5,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../styles/globals.css";
 
 const Report = () => {
   const [showDetails, setShowDetails] = useState(false);
@@ -34,9 +35,9 @@ const Report = () => {
   return (
     <div
       id="report"
-      className="min-h-screen flex bg-[#FCEDF2] items-center justify-center"
+      className="min-h-screen flex flex-col bg-[#FCEDF2] items-center justify-center scrollbar-hide"
     >
-      <div className="flex flex-col items-center justify-center container mx-auto px-4 py-16">
+      <div className="flex flex-col items-center justify-center w-full container mx-auto px-4 py-16">
         <div className="w-full mb-12">
           <Slider {...settings}>
             {images.map((src, index) => (

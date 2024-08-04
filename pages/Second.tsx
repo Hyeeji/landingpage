@@ -59,10 +59,10 @@ const Second = () => {
   };
 
   return (
-    <div className="bg-red-50 min-h-screen flex flex-col">
-      <div className=" flex flex-col justify-center">
+    <div className="bg-red-50 min-h-screen flex flex-col scrollbar-hide">
+      <div className="flex flex-col justify-center flex-1">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mt-10">
+          <h2 className="text-3xl font-bold text-center mt-14">
             실제 사용자 후기
           </h2>
           <div className="justify-center items-center mt-1 mb-8">
@@ -83,10 +83,10 @@ const Second = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center mt-16">
+      <div className="flex flex-col justify-center mt-16 flex-1">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">참여 혜택</h2>
-          <div className="flex flex-wrap justify-center space-x-4">
+          <div className="flex flex-wrap justify-center mb-14 space-x-4">
             {benefits.map((benefit, index) => (
               <BenefitItem
                 key={index}

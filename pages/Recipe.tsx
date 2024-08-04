@@ -12,7 +12,10 @@ const Recipe = () => {
   };
 
   return (
-    <div id="recipe" className="min-h-screen flex items-center justify-center">
+    <div
+      id="recipe"
+      className="min-h-screen flex items-center justify-center scrollbar-hide"
+    >
       <div className="flex flex-col items-center justify-center container mx-auto px-4 py-16">
         <div className="w-full mb-12 flex justify-center">
           <Image
