@@ -22,6 +22,15 @@ const Report = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
+    appendDots: (dots: React.ReactNode) => (
+      <div
+        style={{
+          marginTop: "-20px",
+        }}
+      >
+        <ul>{dots}</ul>
+      </div>
+    ),
   };
 
   const images = [
