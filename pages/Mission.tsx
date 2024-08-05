@@ -24,7 +24,6 @@ const Mission = () => {
             alt="mission image"
             width={200}
             height={200}
-            className="mx-auto rounded-2xl"
           />
         </div>
         <h3 className="text-center text-2xl font-bold mb-4 text-[#E86896]">

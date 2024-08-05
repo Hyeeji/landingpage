@@ -1,11 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import "../styles/globals.css";
 import { FaCheckCircle } from "react-icons/fa";
 import { IoTicketOutline } from "react-icons/io5";
 
 const Fee = () => {
+  const [showDetails, setShowDetails] = useState(false);
+
+  const handleShowDetails = () => {
+    setShowDetails(!showDetails);
+  };
+
   const benefits = [
     "챌린지 성공시 100% 즉시 환급",
     "친구와 함께 챌린지 성공시 5천원 쿠폰 증정",
@@ -17,7 +23,7 @@ const Fee = () => {
   return (
     <div
       id="fee"
-      className="scrollbar-hide min-h-screen flex flex-colitems-center justify-center"
+      className="scrollbar-hide min-h-screen flex flex-col items-center justify-center"
     >
       <div className="flex flex-col items-center justify-center container mx-auto px-1 py-12">
         <div className="bg-gray-50 shadow-2xl rounded-2xl px-6 py-12 mb-12 text-center">
@@ -52,6 +58,29 @@ const Fee = () => {
         >
           지금 참여하기
         </div>
+        <p
+          onClick={handleShowDetails}
+          className="mt-6 underline cursor-pointer"
+        >
+          참여가 고민되시나요?
+        </p>
+        {showDetails && (
+          <div className="mt-4 font-[meetme] justify-center items-center text-center ">
+            <a
+              href="http://pf.kakao.com/_lxjxgkG"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#FFEA00] text-black px-6 py-3 rounded-full text-xl "
+            >
+              카카오톡 채널 추가하기
+            </a>
+            <p className="font-[meetme] text-xl p-3 m-4 w-auto">
+              카카오톡 채널 추가 후
+              <br />
+              다음 기수 알림을 받아보세요!
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

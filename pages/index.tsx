@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import Title from "./Title";
-import Second from "./Second";
+import Benefits from "./Benefits";
 import Refund from "./Refund";
 import Coupon from "./Coupon";
 import Calories from "./Calories";
@@ -11,6 +11,10 @@ import Mission from "./Mission";
 import Fee from "./Fee";
 import FAQ from "./FAQ";
 import "../styles/globals.css";
+import Intro from "./Intro";
+import Ranking from "./Ranking";
+import Message from "./Message";
+import Reviews from "./ReviewsChat";
 
 const Home = () => {
   return (
@@ -24,7 +28,11 @@ const Home = () => {
         <link rel="icon" href="/img/logo.png" />
       </Head>
       <Title />
-      <Second />
+      <Intro />
+      <Ranking />
+      <Message />
+      <Reviews />
+      <Benefits />
       <Refund />
       <Coupon />
       <Calories />
