@@ -8,12 +8,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/globals.css";
 
 const Report = () => {
-  const [showDetails, setShowDetails] = useState(false);
-
-  const handleShowDetails = () => {
-    setShowDetails(!showDetails);
-  };
-
   const settings = {
     dots: true,
     infinite: true,
@@ -22,15 +16,6 @@ const Report = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
-    appendDots: (dots: React.ReactNode) => (
-      <div
-        style={{
-          marginTop: "-20px",
-        }}
-      >
-        <ul>{dots}</ul>
-      </div>
-    ),
   };
 
   const images = [
