@@ -22,22 +22,26 @@ const ReviewText = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-3xl font-bold text-center mt-14">실제 사용자 후기</h2>
-      <div className="justify-center items-center mt-1 mb-8">
-        <Slider {...settings}>
-          {reviews.map((review, index) => (
-            <div key={index} className="p-4">
-              <div className="flex justify-center items-center shadow-md p-4 rounded-2xl bg-white">
-                <FaQuoteLeft className="text-2xl mr-5" />
-                <p className="font-['meetme'] text-xl text-center whitespace-pre-line">
-                  {review}
-                </p>
-                <FaQuoteRight className="text-2xl ml-5" />
+    <div className="flex flex-col justify-center flex-1">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mt-14">
+          실제 사용자 후기
+        </h2>
+        <div className="justify-center items-center mt-1 mb-8">
+          <Slider {...settings}>
+            {reviews.map((review, index) => (
+              <div key={index} className="p-4">
+                <div className="flex justify-center items-center shadow-md p-4 rounded-2xl bg-white">
+                  <FaQuoteLeft className="text-2xl mr-5" />
+                  <p className="font-['meetme'] text-xl text-center whitespace-pre-line">
+                    {review}
+                  </p>
+                  <FaQuoteRight className="text-2xl ml-5" />
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );

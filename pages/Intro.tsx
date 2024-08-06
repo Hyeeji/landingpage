@@ -20,11 +20,11 @@ const Intro = () => {
           쉽고 건강하게 다이어트 하는 방법
         </p>
       </div>
-      <div className="w-full max-w-sm md:max-w-md lg:max-w-lg">
+      <div className="w-full flex items-center max-w-sm md:max-w-md lg:max-w-lg">
         <Image
           className="rounded-2xl"
           src="/img/introChat.png"
-          alt="review"
+          alt="intro chat"
           width={400}
           height={400}
         />

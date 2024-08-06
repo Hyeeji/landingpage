@@ -24,7 +24,7 @@ const Ranking = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen flex flex-col justify-center items-center scroll-hide p-4">
+    <div className="min-h-screen flex flex-col justify-center items-center scroll-hide p-4">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold text-center mt-14">
           실제 사용자 후기
@@ -53,11 +53,11 @@ const Ranking = () => {
         </p>
         <p className="mt-3 text-lg font-semibold">*실제 참가자들 감량 추이</p>
       </div>
-      <div className="w-full max-w-sm md:max-w-md lg:max-w-lg">
+      <div className="w-full flex items-center max-w-sm md:max-w-md lg:max-w-lg">
         <Image
           className="rounded-5xl mb-8"
           src="/img/Ranking.png"
-          alt="review"
+          alt="ranking"
           width={400}
           height={400}
         />

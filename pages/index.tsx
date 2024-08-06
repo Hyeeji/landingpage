@@ -15,6 +15,8 @@ import Intro from "./Intro";
 import Ranking from "./Ranking";
 import Message from "./Message";
 import Reviews from "./ReviewsChat";
+import Challenge from "./Challenge";
+import Message2 from "./Message2";
 
 const Home = () => {
   return (
@@ -31,6 +33,8 @@ const Home = () => {
       <Intro />
       <Ranking />
       <Message />
+      <Challenge />
+      <Message2 />
       <Reviews />
       <Benefits />
       <Refund />

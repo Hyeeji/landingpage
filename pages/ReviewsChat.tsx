@@ -4,11 +4,12 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/globals.css";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const Reviews = () => {
   const settings_img = {
     centerMode: true,
-    centerPadding: "110px",
+    centerPadding: "100px",
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
@@ -29,7 +30,18 @@ const Reviews = () => {
   return (
     <div className="bg-gray-50 flex flex-col justify-center items-center min-h-screen p-4">
       <div className="w-full max-w-4xl">
-        <div className="m-10 text-center font-bold text-3xl">
+        <div className="flex flex-col items-center font-semibold text-xl">
+          <p className="text-xl">챌린지 참여자들은</p>
+          <p className="text-xl">서로 응원하고 다이어트 정보도 공유하며</p>
+          <div className="flex flex-row mt-3 ">
+            <FaQuoteLeft className="mr-2 text-base" />
+            <p className="text-[#E86896] text-3xl">
+              함께 다이어트 하고 있어요 !
+            </p>
+            <FaQuoteRight className="ml-2 text-base" />
+          </div>
+        </div>
+        <div className="m-10 text-center font-bold text-2xl">
           실제 챌린지 참여자들 대화
         </div>
         <Slider {...settings_img}>
