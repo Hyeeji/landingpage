@@ -19,7 +19,7 @@ const Recipe = () => {
             height={250}
           />
         </div>
-        <h3 className="text-center text-2xl font-bold mb-4 text-[#E86896]">
+        <h3 className="mt-5 text-center text-2xl font-bold mb-4 text-[#E86896]">
           맛있는 다이어트 레시피 <br />
           100개 제공
         </h3>

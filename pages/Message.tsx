@@ -32,7 +32,7 @@ const Message = () => {
         <p className="font-semibold text-2xl -md:text-4xl lg:text-5xl">
           계속해서 편하고 널널한 옷만?
         </p>
-        <p className="font-semibold text-[#E86896] text-2xl md:text-4xl lg:text-5xl">
+        <p className="mb-12 font-semibold text-[#E86896] text-xl md:text-4xl lg:text-5xl">
           이제는 나에게 딱 어울리는 옷 입어야죠 !
         </p>
       </div>

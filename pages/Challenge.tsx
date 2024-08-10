@@ -29,14 +29,14 @@ const Challenge = () => {
         <Image
           src="/img/mission_w.png"
           alt="calory-tracker image"
-          width={200}
+          width={150}
           height={300}
           className="border"
         />
         <Image
           src="/img/mission_f.png"
           alt="calory-tracker image"
-          width={200}
+          width={150}
           height={300}
           className="border"
         />
@@ -50,7 +50,7 @@ const Challenge = () => {
           <FaCheckCircle className="text-[#E86896] mr-2" />
           <p className="text-xl">매일 2번 식단 인증</p>
         </div>
-        <p className="mt-3 mb-12 text-center text-xl font-semibold">
+        <p className="mt-3 mb-12 text-center text-lg font-semibold">
           각종 논문을 참고하여 <br />
           쉽고 간단하지만 효과적인 미션을 선정했습니다.
         </p>

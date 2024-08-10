@@ -11,7 +11,7 @@ const Mission = () => {
       className="min-h-screen flex flex-col bg-gray-900 
        items-center justify-center scrollbar-hide"
     >
-      <h3 className="text-center text-3xl font-bold mb-4 text-[#E86896]">
+      <h3 className="mt-12 text-center text-3xl font-bold mb-4 text-[#E86896]">
         챌린지 미션
       </h3>
       <p className="text-center text-xl text-white">
@@ -20,12 +20,13 @@ const Mission = () => {
       <p className="text-center text-xl font-semibold text-white">
         10시 전까지 채팅방에 인증해주세요
       </p>
-      <p className="text-center mt-16 text-xl font-bold text-white">
+      <p className="text-center mt-10 text-xl font-bold text-white">
         인증 방법
       </p>
       <div className="justify-center items-center text-center text-white">
-        <p className="shadow-lg border-[#E86896] rounded-xl text-lg p-3 w-auto">
-          몸무게 <br /> 아래 사진처럼 발이 보이도록 인증 해주세요
+        <p className="mt-5 text-lg font-semibold">몸무게</p>
+        <p className="text-base w-auto">
+          아래 사진처럼 발이 보이도록 인증 해주세요
         </p>
         <div className="flex justify-center mb-4">
           <Image
@@ -36,11 +37,11 @@ const Mission = () => {
             height={200}
           />
         </div>
-        <p className="shadow-lg border-[#E86896] rounded-xl text-lg p-3 m-4 w-auto">
-          식단 <br />
-          칼로리 측정 후 인증하기 버튼을 눌러 인증 해주세요
+        <p className="mt-8 text-lg font-semibold">식단</p>
+        <p className="mb-4 text-base w-auto">
+          칼로리 측정 후 인증하기 버튼으로 인증 해주세요
         </p>
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-12">
           <Image
             className="rounded-2xl"
             src="/img/how_to.png"

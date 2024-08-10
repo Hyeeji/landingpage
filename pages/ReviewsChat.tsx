@@ -9,7 +9,7 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 const Reviews = () => {
   const settings_img = {
     centerMode: true,
-    centerPadding: "100px",
+    centerPadding: "70px",
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
@@ -35,7 +35,7 @@ const Reviews = () => {
           <p className="text-xl">서로 응원하고 다이어트 정보도 공유하며</p>
           <div className="flex flex-row mt-3 ">
             <FaQuoteLeft className="mr-2 text-base" />
-            <p className="text-[#E86896] text-3xl">
+            <p className="text-[#E86896] text-2xl">
               함께 다이어트 하고 있어요 !
             </p>
             <FaQuoteRight className="ml-2 text-base" />
