@@ -52,7 +52,7 @@ const Home = () => {
           rel="noopener noreferrer"
           className="animate-bounce font-['MangoDdobak-B'] h-16 w-44 flex justify-center items-center
           bg-white border-2 border-[#E86896] rounded-full
-          cursor-pointer text-xl mb-16 hover:bg-[#E86896] transition"
+          cursor-pointer text-xl mb-16 hover:bg-[#FFE1E8] hover:text-[#E86896] transition"
         >
           지금 참여하기
         </a>

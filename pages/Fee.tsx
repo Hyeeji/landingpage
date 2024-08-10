@@ -45,13 +45,18 @@ const Fee = () => {
           </ul>
         </div>
 
-        <div
-          className="h-16 w-44 flex justify-center items-center
-          bg-white border-2 border-[#E86896] text-[#E86896] rounded-full
-          cursor-pointer text-xl"
-        >
-          지금 참여하기
+        <div className="h-16 w-44 flex relative">
+          <a
+            href="https://smore.im/form/Md4E0bNAXj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white border-2 border-[#E86896] text-[#E86896] rounded-full
+            cursor-pointer text-xl w-full h-full flex justify-center items-center hover:bg-[#FFE1E8] transition"
+          >
+            지금 참여하기
+          </a>
         </div>
+
         <p className="mt-10 font-bold cursor-pointer">참여가 고민되시나요?</p>
         <div className="mt-4 font-[meetme] justify-center items-center text-center ">
           <a
