@@ -45,7 +45,7 @@ const Ranking = () => {
           </Slider>
         </div>
       </div>
-      <div className="mt-10 mb-5 text-center">
+      <div className="mt-20 mb-5 text-center">
         <p className="text-2xl md:text-4xl lg:text-5xl font-semibold">
           여러분도 다이어트
           <br />

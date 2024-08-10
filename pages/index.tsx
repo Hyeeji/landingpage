@@ -45,6 +45,18 @@ const Home = () => {
       <Mission />
       <Fee />
       <FAQ />
+      <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2">
+        <a
+          href="https://smore.im/form/Md4E0bNAXj"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="animate-bounce font-['MangoDdobak-B'] h-16 w-44 flex justify-center items-center
+          bg-white border-2 border-[#E86896] rounded-full
+          cursor-pointer text-xl mb-16 hover:bg-[#E86896] transition"
+        >
+          지금 참여하기
+        </a>
+      </div>
     </div>
   );
 };

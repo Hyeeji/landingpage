@@ -5,12 +5,6 @@ import Image from "next/image";
 import "../styles/globals.css";
 
 const Calories = () => {
-  const [showDetails, setShowDetails] = useState(false);
-
-  const handleShowDetails = () => {
-    setShowDetails(!showDetails);
-  };
-
   return (
     <div
       id="calories"
@@ -19,13 +13,15 @@ const Calories = () => {
       <div className="flex flex-col items-center justify-center container mx-auto px-4 py-16">
         <div className="flex justify-center mb-12 w-full space-x-4">
           <Image
-            src="/img/calculator.png"
+            className="rounded-xl"
+            src="/img/cal_ex1.png"
             alt="calory-tracker image"
             width={150}
             height={300}
           />
           <Image
-            src="/img/calories.png"
+            className="rounded-xl"
+            src="/img/cal_ex2.png"
             alt="calory-tracker image"
             width={150}
             height={300}
@@ -40,20 +36,21 @@ const Calories = () => {
         <p className="text-center text-lg font-semibold">
           정확한 칼로리를 위해서 측정할 때<br /> 음식과 양을 적어 주세요.
         </p>
-        <p
-          className="text-center mt-5 text-lg underline cursor-pointer"
-          onClick={handleShowDetails}
-        >
-          식단 인증방법
-        </p>
-        {showDetails && (
-          <div className="mt-4 text-center">
-            <p className="flex justify-center  text-[#E86896] items-center shadow-lg rounded-xl text-lg p-3 m-4 w-auto h-20">
-              하단의 카카오톡 버튼을 눌러
-              <br /> 채팅방에 공유해주세요
-            </p>
-          </div>
-        )}
+        <p className="text-center mt-12 text-xl font-bold">식단 인증방법</p>
+        <div>
+          <Image
+            src="/img/how_to.png"
+            alt="how to clear mission"
+            width={280}
+            height={200}
+          />
+        </div>
+        <div className="text-center mt-5">
+          <p>
+            인증하기 버튼을 눌러
+            <br /> 채팅방에 공유해주세요
+          </p>
+        </div>
       </div>
     </div>
   );

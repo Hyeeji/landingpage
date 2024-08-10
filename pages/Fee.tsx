@@ -6,12 +6,6 @@ import { FaCheckCircle } from "react-icons/fa";
 import { IoTicketOutline } from "react-icons/io5";
 
 const Fee = () => {
-  const [showDetails, setShowDetails] = useState(false);
-
-  const handleShowDetails = () => {
-    setShowDetails(!showDetails);
-  };
-
   const benefits = [
     "챌린지 성공시 100% 즉시 환급",
     "친구와 함께 챌린지 성공시 5천원 쿠폰 증정",
@@ -52,35 +46,28 @@ const Fee = () => {
         </div>
 
         <div
-          className="animate-bounce h-16 w-44 sm:h-16 sm:w-44 md:h-20 md:w-48 lg:h-24 lg:w-52 flex justify-center items-center
-          bg-white border-2 border-[#E86896] rounded-full
-          cursor-pointer text-[#E86896] text-xl sm:text-xl md:text-xl lg:text-xl mt-16 sm:mb-16 md:mb-20 lg:mb-24"
+          className="h-16 w-44 flex justify-center items-center
+          bg-white border-2 border-[#E86896] text-[#E86896] rounded-full
+          cursor-pointer text-xl"
         >
           지금 참여하기
         </div>
-        <p
-          onClick={handleShowDetails}
-          className="mt-6 underline cursor-pointer"
-        >
-          참여가 고민되시나요?
-        </p>
-        {showDetails && (
-          <div className="mt-4 font-[meetme] justify-center items-center text-center ">
-            <a
-              href="http://pf.kakao.com/_lxjxgkG"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-[#FFEA00] text-black px-6 py-3 rounded-full text-xl "
-            >
-              카카오톡 채널 추가하기
-            </a>
-            <p className="font-[meetme] text-xl p-3 m-4 w-auto">
-              카카오톡 채널 추가 후
-              <br />
-              다음 기수 알림을 받아보세요!
-            </p>
-          </div>
-        )}
+        <p className="mt-10 font-bold cursor-pointer">참여가 고민되시나요?</p>
+        <div className="mt-4 font-[meetme] justify-center items-center text-center ">
+          <a
+            href="http://pf.kakao.com/_lxjxgkG"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#FFEA00] text-black px-6 py-3 rounded-full text-xl "
+          >
+            카카오톡 채널 추가하기
+          </a>
+          <p className="font-[meetme] text-xl p-3 m-4 w-auto">
+            카카오톡 채널 추가 후
+            <br />
+            다음 기수 알림을 받아보세요!
+          </p>
+        </div>
       </div>
     </div>
   );

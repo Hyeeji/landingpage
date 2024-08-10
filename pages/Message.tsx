@@ -22,9 +22,11 @@ const Message = () => {
           height={400}
         />
       </div>
-      <div className="animate-bounce mt-14 text-center font-semibold bg-gray-50 rounded-3xl py-3 px-5 shadow-lg  text-3xl md:text-4xl lg:text-5xl">
-        <p className="font-[theface]">우리 다이어트 성공하고</p>
-        <p className="font-[theface] text-[#E86896]">예쁜 옷 같이 입어요.</p>
+      <div className="animate-bounce mt-14 text-center font-semibold bg-gray-50 rounded-3xl py-3 px-5 shadow-lg  text-2xl md:text-4xl lg:text-5xl">
+        <p className="font-[MangoDdobak-B]">우리 다이어트 성공하고</p>
+        <p className="font-[MangoDdobak-B] text-[#E86896]">
+          예쁜 옷 같이 입어요.
+        </p>
       </div>
       <div className="text-center mt-8">
         <p className="font-semibold text-2xl -md:text-4xl lg:text-5xl">
