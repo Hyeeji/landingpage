@@ -33,7 +33,7 @@ const Title = () => {
 
           <div className="font-['MangoDdobak-B'] text-2xl sm:text-4xl md:text-6xl lg:text-8xl mt-12">
             <p className="mb-2">5가지 혜택 받고</p>
-            <p className="mb-24">건강하게 같이 다이어트하기</p>
+            <p className="mb-20">건강하게 같이 다이어트하기</p>
           </div>
         </div>
       </div>
