@@ -7,7 +7,7 @@ import { IoTicketOutline } from "react-icons/io5";
 
 const Fee = () => {
   const benefits = [
-    "챌린지 성공시 100% 즉시 환급",
+    "챌린지 성공시 무료",
     "친구와 함께 챌린지 성공시 5천원 쿠폰 증정",
     "AI 식단 칼로리 측정",
     "몸무게, 칼로리 리포트 제공",
@@ -25,8 +25,8 @@ const Fee = () => {
             참가비 안내
           </h3>
           <p className="text-2xl mb-4">
-            <span className="line-through text-gray-500">정가 40,000원</span>
-            <span className="text-2xl font-bold text-[#E86896]"> 30,000원</span>
+            <span className="line-through text-gray-500">정가 30,000원</span>
+            <span className="text-2xl font-bold text-[#E86896]"> 20,000원</span>
           </p>
           <div className="flex flex-row p-3 bg-gray-200 rounded-xl items-center justify-center">
             <IoTicketOutline className="text-[#E86896] mr-2 text-2xl" />
