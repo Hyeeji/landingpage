@@ -1,7 +1,9 @@
 import React from "react";
+import ReactGA from "react-ga4";
 import "../styles/globals.css";
 import { Link } from "react-scroll";
 import Image from "next/image";
+import TrackEvent from "./TrackEvent";
 
 interface BenefitItemProps {
   benefitImg: string;
@@ -25,7 +27,10 @@ const BenefitItem: React.FC<BenefitItemProps> = ({
         className="flex flex-col justify-center items-center text-center bg-white p-4 rounded-3xl shadow-md text-black flex-1 mx-2 mb-4"
         style={{ minWidth: "250px", height: "300px", position: "relative" }}
       >
-        <div className="flex flex-col justify-center items-center w-full h-full">
+        <div
+          className="flex flex-col justify-center items-center w-full h-full"
+          onClick={() => TrackEvent(benefitText)}
+        >
           <div className="relative w-full h-2/3 mb-4">
             <Image
               src={benefitImg}

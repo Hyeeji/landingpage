@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import ReactGA from "react-ga4";
 import "../styles/globals.css";
 import { FaCheckCircle } from "react-icons/fa";
 import { IoTicketOutline } from "react-icons/io5";
+import TrackEvent from "@/components/TrackEvent";
 
 const Fee = () => {
   const benefits = [
@@ -52,6 +54,7 @@ const Fee = () => {
             rel="noopener noreferrer"
             className="bg-white border-2 border-[#E86896] text-[#E86896] rounded-full
             cursor-pointer text-xl w-full h-full flex justify-center items-center hover:bg-[#FFE1E8] transition"
+            onClick={() => TrackEvent("Fee-button Click")}
           >
             지금 참여하기
           </a>
@@ -64,6 +67,7 @@ const Fee = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#FFEA00] text-black px-6 py-3 rounded-full text-xl "
+            onClick={() => TrackEvent("카카오 채널 추가")}
           >
             카카오톡 채널 추가하기
           </a>
