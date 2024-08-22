@@ -29,7 +29,7 @@ const BenefitItem: React.FC<BenefitItemProps> = ({
       >
         <div
           className="flex flex-col justify-center items-center w-full h-full"
-          onClick={() => TrackEvent(benefitText)}
+          onClick={() => TrackEvent(benefitText + "_클릭")}
         >
           <div className="relative w-full h-2/3 mb-4">
             <Image

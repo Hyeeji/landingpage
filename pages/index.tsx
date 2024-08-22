@@ -75,9 +75,8 @@ const Home = () => {
   const { query } = router;
   let dynamicLink = "https://smore.im/form/Md4E0bNAXj"; // 기본 링크
 
-  // 쿼리 스트링에 따라 동적으로 링크 설정
   if (query.from === "calory") {
-    dynamicLink = "https://smore.im/form/PqIhkB9C7u"; // 원하는 링크로 변경
+    dynamicLink = "https://smore.im/form/PqIhkB9C7u";
   }
 
   return (
@@ -89,52 +88,52 @@ const Home = () => {
           content="Welcome to diet challenge landing page"
         />
       </Head>
-      <div ref={setRef(0)} data-section="Page_1">
+      <div ref={setRef(0)} data-section="1_페이지">
         <Title />
       </div>
-      <div ref={setRef(1)} data-section="Page_2">
+      <div ref={setRef(1)} data-section="2_페이지">
         <Intro />
       </div>
-      <div ref={setRef(2)} data-section="Page_3">
+      <div ref={setRef(2)} data-section="3_페이지">
         <Ranking />
       </div>
-      <div ref={setRef(3)} data-section="Page_4">
+      <div ref={setRef(3)} data-section="4_페이지">
         <Message />
       </div>
-      <div ref={setRef(4)} data-section="Page_5">
+      <div ref={setRef(4)} data-section="5_페이지">
         <Challenge />
       </div>
-      <div ref={setRef(5)} data-section="Page_6">
+      <div ref={setRef(5)} data-section="6_페이지">
         <Message2 />
       </div>
-      <div ref={setRef(6)} data-section="Page_Reviews">
+      <div ref={setRef(6)} data-section="리뷰_페이지">
         <Reviews />
       </div>
-      <div ref={setRef(7)} data-section="Page_Benefits">
+      <div ref={setRef(7)} data-section="혜택_페이지">
         <Benefits />
       </div>
-      <div ref={setRef(8)} data-section="Page_Refund">
+      <div ref={setRef(8)} data-section="환불_페이지">
         <Refund />
       </div>
-      <div ref={setRef(9)} data-section="Page_Coupon">
+      <div ref={setRef(9)} data-section="쿠폰_페이지">
         <Coupon />
       </div>
-      <div ref={setRef(10)} data-section="Page_Calores">
+      <div ref={setRef(10)} data-section="칼로리_페이지">
         <Calories />
       </div>
-      <div ref={setRef(11)} data-section="Page_Report">
+      <div ref={setRef(11)} data-section="리포트_페이지">
         <Report />
       </div>
-      <div ref={setRef(12)} data-section="Page_Recipe">
+      <div ref={setRef(12)} data-section="레시피_페이지">
         <Recipe />
       </div>
-      <div ref={setRef(13)} data-section="Page_Mission">
+      <div ref={setRef(13)} data-section="미션_페이지">
         <Mission />
       </div>
-      <div ref={setRef(14)} data-section="Page_Fee">
+      <div ref={setRef(14)} data-section="금액_페이지">
         <Fee />
       </div>
-      <div ref={setRef(15)} data-section="Page_FAQ">
+      <div ref={setRef(15)} data-section="질문답변_페이지">
         <FAQ />
       </div>
 
@@ -146,7 +145,7 @@ const Home = () => {
           className="animate-bounce font-['MangoDdobak-B'] h-16 w-44 flex justify-center items-center
           bg-white border-2 border-[#E86896] rounded-full
           cursor-pointer text-xl mb-16 hover:bg-[#FFE1E8] hover:text-[#E86896] transition"
-          onClick={() => TrackEvent("Floating-button Click")}
+          onClick={() => TrackEvent("지금참여하기_클릭")}
         >
           지금 참여하기
         </a>
