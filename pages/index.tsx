@@ -23,12 +23,12 @@ import mixpanel from "mixpanel-browser";
 import TrackEvent from "@/components/TrackEvent";
 import * as amplitude from "@amplitude/analytics-browser";
 
+// Mixpanel 및 Google Analytics 초기화
 mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL}`, {
   debug: true,
   track_pageview: true,
 });
 ReactGA.initialize(`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`);
-amplitude.init(`${process.env.NEXT_PUBLIC_AMPLITUDE}`);
 
 const Home = () => {
   const router = useRouter();
@@ -36,6 +36,11 @@ const Home = () => {
   const observedSections = useRef<Set<string>>(new Set());
 
   useEffect(() => {
+    // Amplitude 초기화는 클라이언트에서만 실행
+    if (typeof window !== "undefined") {
+      amplitude.init(`${process.env.NEXT_PUBLIC_AMPLITUDE}`);
+    }
+
     ReactGA.send("pageview");
 
     const observer = new IntersectionObserver(
@@ -62,9 +67,7 @@ const Home = () => {
     });
 
     return () => {
-      sectionsRef.current.forEach((section) => {
-        if (section) observer.unobserve(section);
-      });
+      observer.disconnect(); // 정리 단계에서 observer 해제
     };
   }, []);
 
