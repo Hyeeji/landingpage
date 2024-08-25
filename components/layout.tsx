@@ -1,15 +1,18 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Image from "next/image";
 import Script from "next/script";
+import Head from "next/head";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
+    <>
+      <Head>
+        <title>다이어트 챌린지</title>
+        <meta
+          name="description"
+          content="Welcome to diet challenge landing page"
+        />
+      </Head>
+      <main>
         {children}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
@@ -23,19 +26,17 @@ export default function RootLayout({
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '1178130950134192');
           fbq('track', 'PageView');
-          `}
+        `}
         </Script>
         <noscript>
-          <Image
+          <img
             height="1"
             width="1"
-            alt="fdqimg"
             style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=1178130950134192&ev=PageView&noscript=1"
           />
         </noscript>
-      </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS!} />
-    </html>
+      </main>
+    </>
   );
 }

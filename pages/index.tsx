@@ -1,27 +1,28 @@
-import React, { useEffect, useRef } from "react";
+"use client";
+
+import React, { ReactElement, useEffect, useRef } from "react";
 import ReactGA from "react-ga4";
 import { useRouter } from "next/router";
-import Head from "next/head";
-import Title from "./Title";
-import Benefits from "./Benefits";
-import Refund from "./Refund";
-import Coupon from "./Coupon";
-import Calories from "./Calories";
-import Report from "./Report";
-import Recipe from "./Recipe";
-import Mission from "./Mission";
-import Fee from "./Fee";
-import FAQ from "./FAQ";
-import "../styles/globals.css";
-import Intro from "./Intro";
-import Ranking from "./Ranking";
-import Message from "./Message";
-import Reviews from "./ReviewsChat";
-import Challenge from "./Challenge";
-import Message2 from "./Message2";
+import Title from "../components/Title";
+import Benefits from "../components/Benefits";
+import Refund from "../components/Refund";
+import Coupon from "../components/Coupon";
+import Calories from "../components/Calories";
+import Report from "../components/Report";
+import Recipe from "../components/Recipe";
+import Mission from "../components/Mission";
+import Fee from "../components/Fee";
+import FAQ from "../components/FAQ";
+import Intro from "../components/Intro";
+import Ranking from "../components/Ranking";
+import Message from "../components/Message";
+import Reviews from "../components/ReviewsChat";
+import Challenge from "../components/Challenge";
+import Message2 from "../components/Message2";
 import mixpanel from "mixpanel-browser";
 import TrackEvent from "@/components/TrackEvent";
 import * as amplitude from "@amplitude/analytics-browser";
+import Layout from "@/components/layout";
 
 // Mixpanel 및 Google Analytics 초기화
 mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL}`, {
@@ -30,7 +31,7 @@ mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL}`, {
 });
 ReactGA.initialize(`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`);
 
-const Home = () => {
+const Page = () => {
   const router = useRouter();
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
   const observedSections = useRef<Set<string>>(new Set());
@@ -84,13 +85,6 @@ const Home = () => {
 
   return (
     <div className="overflow-scroll scrollbar-hide">
-      <Head>
-        <title>다이어트 챌린지</title>
-        <meta
-          name="description"
-          content="Welcome to diet challenge landing page"
-        />
-      </Head>
       <div ref={setRef(0)} data-section="1_페이지">
         <Title />
       </div>
@@ -157,4 +151,8 @@ const Home = () => {
   );
 };
 
-export default Home;
+Page.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Page;
