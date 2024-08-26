@@ -33,19 +33,19 @@ const faqData: FAQItem[] = [
             </tr>
             <tr>
               <td className="px-4 py-2 border-b border-r">8번 ~ 10번</td>
-              <td className="px-4 py-2 border-b">10,000원</td>
+              <td className="px-4 py-2 border-b">5,000원</td>
             </tr>
             <tr>
               <td className="px-4 py-2 border-b border-r">11번 ~ 12번</td>
-              <td className="px-4 py-2 border-b">15,000원</td>
+              <td className="px-4 py-2 border-b">10,000원</td>
             </tr>
             <tr>
               <td className="px-4 py-2 border-b border-r">13번</td>
-              <td className="px-4 py-2 border-b">25,000원</td>
+              <td className="px-4 py-2 border-b">15,000원</td>
             </tr>
             <tr>
               <td className="px-4 py-2 border-r">14번</td>
-              <td className="px-4 py-2">30,000원</td>
+              <td className="px-4 py-2">20,000원</td>
             </tr>
           </tbody>
         </table>
