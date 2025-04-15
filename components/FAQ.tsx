@@ -33,7 +33,7 @@ const faqData: FAQItem[] = [
             </tr>
             <tr>
               <td className="px-4 py-2 border-b border-r">8번 ~ 9번</td>
-              <td className="px-4 py-2 border-b">50,000원</td>
+              <td className="px-4 py-2 border-b">5,000원</td>
             </tr>
             <tr>
               <td className="px-4 py-2 border-b border-r">10번 ~ 11번</td>

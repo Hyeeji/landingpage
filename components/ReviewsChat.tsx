@@ -21,9 +21,9 @@ const Reviews = () => {
   const chats = [
     "/img/chat1.png",
     "/img/chat2-1.png",
-    "/img/chat2-2.png", // 첫 번째 이미지 경로
-    "/img/chat3.png", // 두 번째 이미지 경로
-    "/img/chat4.png", // 필요한 만큼 추가
+    "/img/chat2-2.png",
+    "/img/chat3.png",
+    "/img/chat4.png",
     "/img/chat5.png",
   ];
 
