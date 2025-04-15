@@ -48,7 +48,7 @@ const BenefitsText = () => {
           식단 공유, <span className="text-red-500">응원받기</span>
         </>
       ),
-      link: "not_yet",
+      link: "feed",
     },
   ];
 
