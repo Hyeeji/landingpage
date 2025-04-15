@@ -11,6 +11,10 @@ const Recipe = () => {
       className="min-h-screen flex items-center justify-center scrollbar-hide"
     >
       <div className="flex flex-col items-center justify-center container mx-auto px-4 py-16">
+      <h3 className="mt-5 text-center text-3xl font-bold m-12 text-[#E86896]">
+          맛있는 다이어트 레시피 <br />
+          100개 제공
+        </h3>
         <div className="mb-4 flex justify-center rounded-xl shadow-lg p-6">
           <Image
             src="/img/recipe_ex.png" // 이미지 경로
@@ -19,10 +23,6 @@ const Recipe = () => {
             height={250}
           />
         </div>
-        <h3 className="mt-5 text-center text-2xl font-bold mb-4 text-[#E86896]">
-          맛있는 다이어트 레시피 <br />
-          100개 제공
-        </h3>
         <p className="text-center text-lg">잘 정리 된 다이어트 레시피로</p>
         <p className="text-center text-lg font-semibold">
           맛있고 건강하게 다이어트 하세요

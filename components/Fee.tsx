@@ -5,15 +5,15 @@ import ReactGA from "react-ga4";
 import "../styles/globals.css";
 import { FaCheckCircle } from "react-icons/fa";
 import { IoTicketOutline } from "react-icons/io5";
-import TrackEvent from "@/components/TrackEvent";
+import TrackEvent from "@/lib/TrackEvent";
 
 const Fee = () => {
   const benefits = [
-    "챌린지 성공시 무료",
-    "친구와 함께 챌린지 성공시 5천원 쿠폰 증정",
-    "AI 식단 칼로리 측정",
+    "챌린지 성공시 100% 무료",
+    "AI 식단 칼로리 무료 측정",
     "몸무게, 칼로리 리포트 제공",
-    "맛있는 다이어트 레시피 100가지 제공",
+    "다이어트 레시피 100가지 제공",
+    "식단 피드 공유 및 응원 받기"
   ];
 
   return (
@@ -24,11 +24,11 @@ const Fee = () => {
       <div className="flex flex-col items-center justify-center container mx-auto px-1 py-12">
         <div className="bg-gray-50 shadow-2xl rounded-2xl px-6 py-12 mb-12 text-center">
           <h3 className="text-2xl font-bold text-[#E86896] mb-4">
-            참가비 안내
+            보증금 안내
           </h3>
           <p className="text-2xl mb-4">
-            <span className="line-through text-gray-500">정가 30,000원</span>
-            <span className="text-2xl font-bold text-[#E86896]"> 20,000원</span>
+            <span className="line-through text-gray-500">정가 40,000원</span>
+            <span className="text-2xl font-bold text-[#E86896]"> 30,000원</span>
           </p>
           <div className="flex flex-row p-3 bg-gray-200 rounded-xl items-center justify-center">
             <IoTicketOutline className="text-[#E86896] mr-2 text-2xl" />
@@ -60,18 +60,27 @@ const Fee = () => {
           </a>
         </div>
 
-        <p className="mt-10 font-bold cursor-pointer">참여가 고민되시나요?</p>
-        <div className="mt-4 font-[meetme] justify-center items-center text-center ">
+        <div className="mt-6 font-[meetme] justify-center items-center text-center ">
           <a
             href="http://pf.kakao.com/_lxjxgkG"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#FFEA00] text-black px-6 py-3 rounded-full text-xl "
+            className="mr-2 inline-block bg-[#FFEA00] text-black px-6 py-3 rounded-full text-xl "
             onClick={() => TrackEvent("카카오채널_클릭")}
           >
             카카오톡 채널 추가하기
           </a>
-          <p className="font-[meetme] text-xl p-3 m-4 w-auto">
+          <a
+            href="https://qr.kakaopay.com/Ej8mZ9nIr3a9809160"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2 inline-block bg-[#FFEA00] text-black px-6 py-3 rounded-full text-xl "
+            onClick={() => TrackEvent("카카오페이_클릭")}
+          >
+            카카오페이 보증금 송금
+          </a>
+          <p className="font-[meetme] text-xl mt-4 font-bold cursor-pointer">참여가 고민되시나요?</p>
+          <p className="font-[meetme] text-xl p-3 w-auto">
             카카오톡 채널 추가 후
             <br />
             다음 기수 알림을 받아보세요!

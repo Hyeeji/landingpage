@@ -32,20 +32,20 @@ const faqData: FAQItem[] = [
               <td className="px-4 py-2 border-b">0원</td>
             </tr>
             <tr>
-              <td className="px-4 py-2 border-b border-r">8번 ~ 10번</td>
-              <td className="px-4 py-2 border-b">5,000원</td>
+              <td className="px-4 py-2 border-b border-r">8번 ~ 9번</td>
+              <td className="px-4 py-2 border-b">50,000원</td>
             </tr>
             <tr>
-              <td className="px-4 py-2 border-b border-r">11번 ~ 12번</td>
-              <td className="px-4 py-2 border-b">10,000원</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-2 border-b border-r">13번</td>
+              <td className="px-4 py-2 border-b border-r">10번 ~ 11번</td>
               <td className="px-4 py-2 border-b">15,000원</td>
             </tr>
             <tr>
+              <td className="px-4 py-2 border-b border-r">12번 - 13번</td>
+              <td className="px-4 py-2 border-b">25,000원</td>
+            </tr>
+            <tr>
               <td className="px-4 py-2 border-r">14번</td>
-              <td className="px-4 py-2">20,000원</td>
+              <td className="px-4 py-2">30,000원</td>
             </tr>
           </tbody>
         </table>
@@ -78,9 +78,9 @@ const faqData: FAQItem[] = [
     question: "인증은 어디에 하나요?",
     answer: (
       <p>
-        챌린지 전날 문자로 오픈채팅방 링크를 드립니다.
+        신청할 때, 입력해 주신 번호 참여코드를 드립니다.
         <br />
-        오픈채팅방에 인증 하시면 됩니다.
+        참여코드 입력 후 생성된 방에서 + 버튼을 눌러 인증하시면 됩니다.
       </p>
     ),
   },
@@ -88,7 +88,7 @@ const faqData: FAQItem[] = [
     question: "업로드 시간을 꼭 지켜야 하나요?",
     answer: (
       <p>
-        네, 22시 전에 모두 인증을 마쳐주셔야
+        네, 24시 전에 모두 인증을 마쳐주셔야
         <br />
         인증 성공입니다.
       </p>

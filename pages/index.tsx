@@ -1,150 +1,118 @@
 "use client";
 
-import React, { ReactElement, useEffect, useRef } from "react";
+import React, { ReactElement, useEffect, useRef, useState } from "react";
 import ReactGA from "react-ga4";
-import { useRouter } from "next/router";
-import Title from "../components/Title";
-import Benefits from "../components/Benefits";
-import Refund from "../components/Refund";
-import Coupon from "../components/Coupon";
-import Calories from "../components/Calories";
-import Report from "../components/Report";
-import Recipe from "../components/Recipe";
-import Mission from "../components/Mission";
-import Fee from "../components/Fee";
-import FAQ from "../components/FAQ";
 import Intro from "../components/Intro";
-import Ranking from "../components/Ranking";
-import Message from "../components/Message";
-import Reviews from "../components/ReviewsChat";
 import Challenge from "../components/Challenge";
 import Message2 from "../components/Message2";
-import mixpanel from "mixpanel-browser";
-import TrackEvent from "@/components/TrackEvent";
-import * as amplitude from "@amplitude/analytics-browser";
+import Reviews from "../components/ReviewsChat";
+import Refund from "@/components/Refund";
 import Layout from "@/components/layout";
+import TrackEvent from "@/lib/TrackEvent";
+import mixpanel from "mixpanel-browser";
+import * as amplitude from "@amplitude/analytics-browser";
+import RemindText from "@/components/RemindText";
+import Motivation from "@/components/Motivation";
+import Game from "@/components/Game";
+import FAQ from "@/components/FAQ";
+import Fee from "@/components/Fee";
+import GameResult from "@/components/GameResult";
+import Research from "@/components/Research";
+import BenefitsText from "@/components/BenefitsText";
+import Calories from "@/components/Calories";
+import Report from "@/components/Report";
+import Recipe from "@/components/Recipe";
+import Feed from "@/components/Feed";
+import ConfirmMission from "@/components/ConfirmMission";
 
-// Mixpanel 및 Google Analytics 초기화
+// Mixpanel 및 Amplitude 초기화
+ReactGA.initialize(`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`);
+amplitude.init(`${process.env.NEXT_PUBLIC_AMPLITUDE}`);
 mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL}`, {
   debug: true,
   track_pageview: true,
 });
-ReactGA.initialize(`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`);
 
 const Page = () => {
-  const router = useRouter();
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const observedSections = useRef<Set<string>>(new Set());
+  const [currentSection, setCurrentSection] = useState(0);
 
   useEffect(() => {
-    // Amplitude 초기화는 클라이언트에서만 실행
-    if (typeof window !== "undefined") {
-      amplitude.init(`${process.env.NEXT_PUBLIC_AMPLITUDE}`);
-    }
-
     ReactGA.send("pageview");
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const sectionName =
-              entry.target.getAttribute("data-section") || "unknown-section";
+          const target = entry.target as HTMLDivElement;
+          const index = parseInt(target.dataset.index || "0");
 
-            if (!observedSections.current.has(sectionName)) {
-              observedSections.current.add(sectionName);
-              TrackEvent(`Scroll-${sectionName}`);
-            }
+          if (entry.isIntersecting && index === currentSection + 1) {
+            // 다음 페이지가 1/5 이상 보였을 때만 이동
+            setTimeout(() => {
+              sectionsRef.current[index]?.scrollIntoView({
+                behavior: "smooth",
+              });
+              setCurrentSection(index);
+              TrackEvent(`Scroll-Section-${index}`);
+            }, 300);
           }
         });
       },
-      {
-        threshold: 0.5, // 섹션의 50%가 보일 때 이벤트 트리거
-      }
+      { threshold: 0.2 } // 20% 이상 보이면 트리거
     );
 
     sectionsRef.current.forEach((section) => {
       if (section) observer.observe(section);
     });
 
-    return () => {
-      observer.disconnect(); // 정리 단계에서 observer 해제
-    };
-  }, []);
+    return () => observer.disconnect();
+  }, [currentSection]);
 
   const setRef = (index: number) => (el: HTMLDivElement | null) => {
     sectionsRef.current[index] = el;
   };
 
-  const { query } = router;
-  let dynamicLink = "https://smore.im/form/Md4E0bNAXj"; // 기본 링크
-
-  if (query.from === "calory") {
-    dynamicLink = "https://smore.im/form/PqIhkB9C7u";
-  }
-
   return (
     <div className="overflow-scroll scrollbar-hide">
-      <div ref={setRef(0)} data-section="1_페이지">
-        <Title />
-      </div>
-      <div ref={setRef(1)} data-section="2_페이지">
-        <Intro />
-      </div>
-      <div ref={setRef(2)} data-section="3_페이지">
-        <Ranking />
-      </div>
-      <div ref={setRef(3)} data-section="4_페이지">
-        <Message />
-      </div>
-      <div ref={setRef(4)} data-section="5_페이지">
-        <Challenge />
-      </div>
-      <div ref={setRef(5)} data-section="6_페이지">
-        <Message2 />
-      </div>
-      <div ref={setRef(6)} data-section="리뷰_페이지">
-        <Reviews />
-      </div>
-      <div ref={setRef(7)} data-section="혜택_페이지">
-        <Benefits />
-      </div>
-      <div ref={setRef(8)} data-section="환불_페이지">
-        <Refund />
-      </div>
-      <div ref={setRef(9)} data-section="쿠폰_페이지">
-        <Coupon />
-      </div>
-      <div ref={setRef(10)} data-section="칼로리_페이지">
-        <Calories />
-      </div>
-      <div ref={setRef(11)} data-section="리포트_페이지">
-        <Report />
-      </div>
-      <div ref={setRef(12)} data-section="레시피_페이지">
-        <Recipe />
-      </div>
-      <div ref={setRef(13)} data-section="미션_페이지">
-        <Mission />
-      </div>
-      <div ref={setRef(14)} data-section="금액_페이지">
-        <Fee />
-      </div>
-      <div ref={setRef(15)} data-section="질문답변_페이지">
-        <FAQ />
-      </div>
-
-      <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2">
+      <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 flex items-center justify-between px-4 py-3">
+        <h1 className="text-xl font-bold text-gray-800 sm:text-2xl">
+          함께하는 다이어트 챌린지
+        </h1>
         <a
-          href={dynamicLink}
+          href="https://smore.im/form/PqIhkB9C7u" // 이동할 사이트 URL
+          target="_blank" // 새 탭에서 열기
+          rel="noopener noreferrer" // 보안 속성
+          className="bg-[#E86896] text-white text-sm px-4 py-2 rounded-lg shadow transition-all sm:text-base flex justify-center items-center"
+          onClick={() => TrackEvent("상단_신청하기")}
+        >
+          신청하기
+        </a>
+
+      </header>
+
+      {[Intro, RemindText, Motivation, Game,GameResult, Research, Challenge, Message2, Reviews, BenefitsText, Refund, Calories, Report, Recipe, Feed, ConfirmMission, Fee, FAQ].map(
+        (Component, index) => (
+          <div
+            ref={setRef(index)}
+            data-index={index}
+            key={index}
+            className="h-dvh"
+          >
+            <Component />
+          </div>
+        )
+      )}
+       <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2">
+        <a
+          href={"https://smore.im/form/PqIhkB9C7u"}
           target="_blank"
           rel="noopener noreferrer"
-          className="animate-bounce font-['MangoDdobak-B'] h-16 w-44 flex justify-center items-center
-          bg-white border-2 border-[#E86896] rounded-full
-          cursor-pointer text-xl mb-16 hover:bg-[#FFE1E8] hover:text-[#E86896] transition"
-          onClick={() => TrackEvent("지금참여하기_클릭")}
+          className="animate-bounce h-14 w-36 flex justify-center items-center
+          bg-black text-white rounded-2xl
+          cursor-pointer text-xl mb-16 hover:bg-[#E86896] hover:text-white transition"
+          onClick={() => TrackEvent("하단_신청하기")}
         >
-          지금 참여하기
+          지금 신청하기
         </a>
       </div>
     </div>

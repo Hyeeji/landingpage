@@ -3,7 +3,7 @@ import ReactGA from "react-ga4";
 import "../styles/globals.css";
 import { Link } from "react-scroll";
 import Image from "next/image";
-import TrackEvent from "./TrackEvent";
+import TrackEvent from "../lib/TrackEvent";
 
 interface BenefitItemProps {
   benefitImg: string;

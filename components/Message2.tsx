@@ -5,25 +5,8 @@ const Message2 = () => {
   return (
     <div className="bg-red-50 min-h-screen flex flex-col justify-center items-center scroll-hide p-4">
       <div className="m-12">
-        <p className="text-center text-xl md:text-4xl lg:text-5xl ">
-          도움이 되는 건 알겠는데...
-        </p>
-        <p className="text-center text-xl md:text-4xl lg:text-5xl font-semibold">
-          그냥 식단 기록 어플 사용하면 되는 거 아니에요?
-        </p>
-        <p className="mt-12 text-center text-xl md:text-4xl lg:text-5xl font-semibold">
-          단순히 혼자 기록만 하면
-          <br /> 타협하면서 쉽게 포기하게 돼요.
-        </p>
-        <p className="mt-10 text-[#E86896] text-center text-2xl md:text-4xl lg:text-5xl font-bold">
-          다이어트에는 꾸준한
-          <br />
-          동기부여가 필요합니다.
-        </p>
-      </div>
-      <div>
         <p className="font-bold text-2xl text-center">
-          혹시 이러진 않으셨나요?
+          혹시 지금까지 이러진 않으셨나요?
         </p>
         <div className="flex flex-col font-[meetme]">
           <div className="flex flex-row mt-3 text-center bg-gray-50 rounded-xl py-3 px-5 shadow-2xl  text-lg">
@@ -38,7 +21,8 @@ const Message2 = () => {
         </div>
         <div className="flex flex-col mt-10 mb-12 text-center font-semibold text-xl">
           <p>다이어트 이제 혼자하지 마세요!</p>
-          <p>함께하면 다이어트 성공 할 수 있어요</p>
+          <p>함께하는 다이어트 챌린지에서</p>
+          <p>다른 참여자들과 같이 다이어트해요</p>
         </div>
       </div>
     </div>

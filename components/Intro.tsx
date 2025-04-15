@@ -1,34 +1,66 @@
-import React from "react";
-import Image from "next/image";
+import React, { useState, useEffect } from "react";
 import "../styles/globals.css";
 
 const Intro = () => {
+  const diets = [
+    "혈당 조절 다이어트",
+    "연예인 다이어트",
+    "원푸드 다이어트",
+    "디톡스 다이어트",
+    "카니보어 다이어트",
+    "⋮",
+  ];
+
+  const [visibleDiets, setVisibleDiets] = useState<string[]>([]);
+  const [showFinalMessage, setShowFinalMessage] = useState(false);
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
+    if (visibleDiets.length < diets.length) {
+      // 다이어트 방법 추가
+      timeout = setTimeout(() => {
+        setVisibleDiets((prev) => [...prev, diets[prev.length]]);
+      }, 1000); // 1초 간격으로 추가
+    } else if (!showFinalMessage) {
+      // 모든 다이어트 방법 표시 후 최종 문구 준비
+      timeout = setTimeout(() => {
+        setShowFinalMessage(true);
+        setVisibleDiets([]); // 이전 다이어트 방법 제거
+      }, 1000);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [visibleDiets, diets, showFinalMessage]);
+
   return (
-    <div className="bg-red-50 min-h-screen flex flex-col justify-center items-center scroll-hide p-4">
-      <div className="mb-12">
-        <p className="text-center text-3xl md:text-4xl lg:text-5xl font-bold">
-          이번에는 다이어트
-          <br />
-          성공하고 싶지 않으세요?
-        </p>
-        <p className="mt-6 md:mt-8 lg:mt-11 text-center text-lg md:text-xl">
-          살빠지는 데에도 이유가 있어요 !
-        </p>
-        <p className="mt-2 text-center text-xl md:text-2xl font-semibold">
-          실제 후기가 말해주는
-          <br />
-          쉽고 건강하게 다이어트 하는 방법
-        </p>
-      </div>
-      <div className="w-full flex items-center max-w-sm md:max-w-md lg:max-w-lg">
-        <Image
-          className="rounded-2xl"
-          src="/img/introChat.png"
-          alt="intro chat"
-          width={400}
-          height={400}
-        />
-      </div>
+    <div
+      className={`h-dvh flex flex-col justify-center items-center p-4 transition-all duration-700 ${
+        showFinalMessage ? "bg-gradient-to-b from-white to-black" : "bg-white"
+      }`}
+    >
+      {!showFinalMessage ? (
+        <div className="text-center space-y-4">
+          {visibleDiets.map((diet, index) => (
+            <p
+              key={index}
+              className={`text-3xl md:text-4xl lg:text-5xl font-bold ${
+                index === visibleDiets.length - 1 ? "animate-grow-shrink" : ""
+              }`}
+            >
+              {diet}
+            </p>
+          ))}
+        </div>
+      ) : (
+        <div className="text-center">
+          <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
+            지금까지 이런 다이어트
+            <br />
+            해보지 않으셨나요?
+          </p>
+        </div>
+      )}
     </div>
   );
 };
