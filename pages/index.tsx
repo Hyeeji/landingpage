@@ -25,10 +25,9 @@ import Recipe from "@/components/Recipe";
 import Feed from "@/components/Feed";
 import ConfirmMission from "@/components/ConfirmMission";
 
-
 const Page = () => {
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const [currentSection, setCurrentSection] = useState(0);
+  const [trackedSections, setTrackedSections] = useState<number[]>([]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -45,22 +44,18 @@ const Page = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const target = entry.target as HTMLDivElement;
-          const index = parseInt(target.dataset.index || "0");
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLDivElement;
+            const index = parseInt(target.dataset.index || "0");
 
-          if (entry.isIntersecting && index === currentSection + 1) {
-            // 다음 페이지가 1/5 이상 보였을 때만 이동
-            setTimeout(() => {
-              sectionsRef.current[index]?.scrollIntoView({
-                behavior: "smooth",
-              });
-              setCurrentSection(index);
-              TrackEvent(`Scroll-Section-${index}`);
-            }, 300);
+            if (!trackedSections.includes(index)) {
+              TrackEvent(`Viewed-Section-${index}`);
+              setTrackedSections((prev) => [...prev, index]);
+            }
           }
         });
       },
-      { threshold: 0.2 } // 20% 이상 보이면 트리거
+      { threshold: 0.2 }
     );
 
     sectionsRef.current.forEach((section) => {
@@ -68,7 +63,7 @@ const Page = () => {
     });
 
     return () => observer.disconnect();
-  }, [currentSection]);
+  }, [trackedSections]);
 
   const setRef = (index: number) => (el: HTMLDivElement | null) => {
     sectionsRef.current[index] = el;
@@ -81,18 +76,17 @@ const Page = () => {
           함께하는 다이어트 챌린지
         </h1>
         <a
-          href="https://smore.im/form/PqIhkB9C7u" // 이동할 사이트 URL
-          target="_blank" // 새 탭에서 열기
-          rel="noopener noreferrer" // 보안 속성
+          href="https://smore.im/form/PqIhkB9C7u"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-[#E86896] text-white text-sm px-4 py-2 rounded-lg shadow transition-all sm:text-base flex justify-center items-center"
           onClick={() => TrackEvent("상단_신청하기")}
         >
           신청하기
         </a>
-
       </header>
 
-      {[Intro, RemindText, Motivation, Game,GameResult, Research, Challenge, Message2, Reviews, BenefitsText, Refund, Calories, Report, Recipe, Feed, ConfirmMission, Fee, FAQ].map(
+      {[Intro, RemindText, Motivation, Game, GameResult, Research, Challenge, Message2, Reviews, BenefitsText, Refund, Calories, Report, Recipe, Feed, ConfirmMission, Fee, FAQ].map(
         (Component, index) => (
           <div
             ref={setRef(index)}
@@ -104,7 +98,7 @@ const Page = () => {
           </div>
         )
       )}
-       <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2">
+      <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2">
         <a
           href={"https://smore.im/form/PqIhkB9C7u"}
           target="_blank"
