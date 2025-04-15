@@ -1,12 +1,5 @@
 import React from "react";
 import "../styles/globals.css";
-import {
-  AiFillDollarCircle,
-  AiFillCalculator,
-  AiFillFileText,
-  AiFillBook,
-} from "react-icons/ai";
-import { HiTicket } from "react-icons/hi2";
 import BenefitItem from "@/components/BenefitItem";
 
 const Benefits = () => {

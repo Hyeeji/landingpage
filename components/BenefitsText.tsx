@@ -59,7 +59,9 @@ const BenefitsText = () => {
       </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl">
           {benefits.map((benefit) => (
-            <Link to={benefit.link} 
+            <Link 
+            key={benefit.id}
+            to={benefit.link} 
             smooth={true}
             duration={200}
             className="cursor-pointer"
