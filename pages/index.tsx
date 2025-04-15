@@ -25,20 +25,22 @@ import Recipe from "@/components/Recipe";
 import Feed from "@/components/Feed";
 import ConfirmMission from "@/components/ConfirmMission";
 
-// Mixpanel 및 Amplitude 초기화
-ReactGA.initialize(`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`);
-amplitude.init(`${process.env.NEXT_PUBLIC_AMPLITUDE}`);
-mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL}`, {
-  debug: true,
-  track_pageview: true,
-});
 
 const Page = () => {
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [currentSection, setCurrentSection] = useState(0);
 
   useEffect(() => {
-    ReactGA.send("pageview");
+    if (typeof window !== "undefined") {
+      ReactGA.initialize(`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`);
+      amplitude.init(`${process.env.NEXT_PUBLIC_AMPLITUDE}`);
+      mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL}`, {
+        debug: true,
+        track_pageview: true,
+      });
+
+      ReactGA.send("pageview");
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
