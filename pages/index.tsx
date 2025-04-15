@@ -55,7 +55,7 @@ const Page = () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.5 }
     );
 
     sectionsRef.current.forEach((section) => {
@@ -70,7 +70,7 @@ const Page = () => {
   };
 
   return (
-    <div className="overflow-scroll scrollbar-hide">
+    <div className="overflow-auto h-full">
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 flex items-center justify-between px-4 py-3">
         <h1 className="text-xl font-bold text-gray-800 sm:text-2xl">
           함께하는 다이어트 챌린지
@@ -86,13 +86,13 @@ const Page = () => {
         </a>
       </header>
 
-      {[Intro, RemindText, Motivation, Game, GameResult, Research, Challenge, Message2, Reviews, BenefitsText, Refund, Calories, Report, Recipe, Feed, ConfirmMission, Fee, FAQ].map(
+      {[Intro, RemindText, Motivation, Game, GameResult, Research, Message2, Reviews, BenefitsText, Refund, Calories, Report, Recipe, Feed, ConfirmMission, Fee, FAQ].map(
         (Component, index) => (
           <div
             ref={setRef(index)}
             data-index={index}
             key={index}
-            className="h-dvh"
+            className="min-h-screen"
           >
             <Component />
           </div>

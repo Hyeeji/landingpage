@@ -17,7 +17,7 @@ const Calories = () => {
         <div className="flex justify-center m-12 w-full space-x-4">
           <Image
             className="rounded-3xl"
-            src="/img/app_cal1.PNG"
+            src="/img/app_cal1.png"
             alt="calory-tracker image"
             width={400}
             height={400}

@@ -19,7 +19,7 @@ const Fee = () => {
   return (
     <div
       id="fee"
-      className="scrollbar-hide min-h-screen flex flex-col items-center justify-center"
+      className="flex-col items-center justify-center"
     >
       <div className="flex flex-col items-center justify-center container mx-auto px-1 py-12">
         <div className="bg-gray-50 shadow-2xl rounded-2xl px-6 py-12 mb-12 text-center">
@@ -54,30 +54,31 @@ const Fee = () => {
             rel="noopener noreferrer"
             className="bg-white border-2 border-[#E86896] text-[#E86896] rounded-full
             cursor-pointer text-xl w-full h-full flex justify-center items-center hover:bg-[#FFE1E8] transition"
-            onClick={() => TrackEvent("금액_신청하기버튼_클릭")}
+            onClick={() => TrackEvent("지금_참여하기_버튼_클릭")}
           >
             지금 참여하기
           </a>
         </div>
-
         <div className="mt-6 font-[meetme] justify-center items-center text-center ">
+          <a
+              href="https://qr.kakaopay.com/Ej8mZ9nIr3a9809160"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#FFEA00] text-black px-6 py-3 rounded-full text-xl "
+              onClick={() => TrackEvent("카카오페이_클릭")}
+            >
+             카카오페이 보증금 송금
+            </a>
+        </div>
+        <div className="mt-2 font-[meetme] justify-center items-center text-center">  
           <a
             href="http://pf.kakao.com/_lxjxgkG"
             target="_blank"
             rel="noopener noreferrer"
-            className="mr-2 inline-block bg-[#FFEA00] text-black px-6 py-3 rounded-full text-xl "
+            className="inline-block bg-[#FFEA00] text-black px-6 py-3 rounded-full text-xl "
             onClick={() => TrackEvent("카카오채널_클릭")}
           >
             카카오톡 채널 추가하기
-          </a>
-          <a
-            href="https://qr.kakaopay.com/Ej8mZ9nIr3a9809160"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-2 inline-block bg-[#FFEA00] text-black px-6 py-3 rounded-full text-xl "
-            onClick={() => TrackEvent("카카오페이_클릭")}
-          >
-            카카오페이 보증금 송금
           </a>
           <p className="font-[meetme] text-xl mt-4 font-bold cursor-pointer">참여가 고민되시나요?</p>
           <p className="font-[meetme] text-xl p-3 w-auto">
