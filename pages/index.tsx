@@ -86,7 +86,7 @@ const Page = () => {
         </a>
       </header>
 
-      {[Intro, RemindText, Motivation, Game, GameResult, Research, Message2, Reviews, BenefitsText, Refund, Calories, Report, Recipe, Feed, ConfirmMission, Fee, FAQ].map(
+      {[Message2, Research, Reviews, BenefitsText, Refund, Calories, Report, Recipe, Feed, ConfirmMission, Fee, FAQ].map(
         (Component, index) => (
           <div
             ref={setRef(index)}
