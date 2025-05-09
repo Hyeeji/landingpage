@@ -24,15 +24,15 @@ const Fee = () => {
       <div className="flex flex-col items-center justify-center container mx-auto px-1 py-12">
         <div className="bg-gray-50 shadow-2xl rounded-2xl px-6 py-12 mb-12 text-center">
           <h3 className="text-2xl font-bold text-[#E86896] mb-4">
-            보증금 안내
+            테스트 기간
           </h3>
           <p className="text-2xl mb-4">
             <span className="line-through text-gray-500">정가 40,000원</span>
-            <span className="text-2xl font-bold text-[#E86896]"> 30,000원</span>
+            <span className="text-2xl font-bold text-[#E86896]"> 0원</span>
           </p>
           <div className="flex flex-row p-3 bg-gray-200 rounded-xl items-center justify-center">
             <IoTicketOutline className="text-[#E86896] mr-2 text-2xl" />
-            <p className="text-lg font-semibold">얼리버드 10,000원 할인</p>
+            <p className="text-lg font-semibold">테스트 기간 40,000원 할인</p>
           </div>
           <h3 className="text-center text-2xl font-bold mt-10 mb-6 text-[#E86896]">
             참여 혜택
